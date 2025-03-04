@@ -19,7 +19,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #7b96d4;
+            background-color: #0d3f8a;
             padding: 15px;
         }
 
@@ -128,7 +128,7 @@
             <a href="#features">Features</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
-            <a href="#logout">Logout</a>
+            <a href="#logout" onclick="logout()">Logout</a>
         </div>
     </div>
 
@@ -168,9 +168,10 @@
             </div>
         </div>
     </div>
+
     <script>
-        function goBack() {
-            window.history.back();
+        function logout() {
+            window.location.href = 'splash.html';
         }
     </script>
 </body>
