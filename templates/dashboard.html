@@ -7,47 +7,166 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: lightgray;
             margin: 0;
+            padding: 0;
+            background-color: #f7dac6;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
 
-        .dashboard-container {
-            text-align: center;
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #7b96d4;
+            padding: 15px;
+        }
+
+        .navbar .app-name {
+            font-weight: bold;
+            color: white;
+            padding-left: 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .column {
+            flex: 1;
             background: white;
-            padding: 30px;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
-        h1 {
-            color: #333;
+        .left-column ul {
+            list-style-type: none;
+            padding: 0;
         }
 
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            text-decoration: none;
+        .left-column li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            padding: 20px;
+        }
+
+        .left-column li:hover {
+            background-color: #ddd;
+        }
+
+        .middle-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             color: white;
-            background-color: orange;
-            border-radius: 5px;
-            transition: 0.3s;
+            align-items: center;
+            flex: 2;
         }
 
-        a:hover {
-            background-color: darkorange;
+        .middle-column h2 {
+            font-size: 36px;
+            color: black;
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            flex: 1;
+        }
+
+        .box {
+            flex: 1;
+            background: #7b96d4;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .full-width-box {
+            width: 100%;
+        }
+
+        .right-column .row {
+            flex-direction: column;
+            flex: 1;
+            padding-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="dashboard-container">
-        <h1>Welcome to Your Dashboard!</h1>
-        <p>hello. how are you?</p>
-        <a href="/">Go Back</a>
+    <div class="navbar">
+        <span class="app-name">InclusiveEdu</span>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="column left-column">
+            <ul>
+                <li>My Learning Plan</li>
+                <li>Assessments</li>
+                <li>Progress & Analytics</li>
+                <li>Collaboration</li>
+                <li>Accessibility Tools</li>
+                <li>Settings</li>
+            </ul>
+        </div>
+
+        <div class="column middle-column">
+            <h2>Welcome Back, user!</h2>
+            <div class="row">
+                <div class="box">Resume Learning</div>
+                <div class="box">Take An Assessment</div>
+                <div class="box">View My Performance</div>
+            </div>
+            <div class="row">
+                <div class="box full-width-box">Additional Content</div>
+            </div>
+            <div class="row">
+                <div class="box full-width-box">More Features</div>
+            </div>
+        </div>
+
+        <div class="column right-column">
+            <div class="row">
+                <div class="box">To-do list</div>
+            </div>
+            <div class="row">
+                <div class="box">User Notifications</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
