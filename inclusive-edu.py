@@ -6,7 +6,7 @@ app = Flask(__name__)
 IMAGE_FOLDER = r"C:\Users\Jan\Downloads\MyStuff\Academics 6\Software Development\inclusive-edu"
 app.config["IMAGE_FOLDER"] = IMAGE_FOLDER
 
-@app.route("/")
+@app.route('/splash')
 def splash():
     return render_template("splash.html")
 
